@@ -783,10 +783,18 @@ body {
   .heading-primary--main {
     padding-right: 0;
     text-align: center; }
+  .heading-secondary {
+    font-size: 6rem; }
+  .section__about--paragraph {
+    font-size: 2.4rem; }
   .hero__left .u-margin-bottom-lg {
     margin-bottom: 39rem !important; }
+  .list-item {
+    font-size: 2rem; }
   .card {
     width: 76%; }
+  .tag {
+    font-size: 1.6rem; }
   .btn--primary {
     transform: translateX(12.4rem); }
   .btn--animated {
