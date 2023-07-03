@@ -23,11 +23,22 @@ ORDER: Base + typography > general layout + grid > page layout > components
   box-sizing: inherit; }
 
 html {
-  /*10px / 16px = 0.625*/
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {
@@ -261,7 +272,7 @@ body {
   border-radius: 1rem; }
   .tag__portfolio {
     background-color: #EBEBEB;
-    border: 1px solid #BBB;
+    border: 1px solid #bbb;
     color: #000; }
 
 .card {
@@ -391,7 +402,7 @@ body {
   max-width: 100%;
   background-image: url(../../images/bg-1.png), linear-gradient(to right bottom, #000, #0C0C0C);
   background-size: cover;
-  height: 115vh; }
+  height: 75rem; }
 
 .section__about--paragraph {
   font-size: 2rem; }
@@ -561,3 +572,73 @@ body {
 
 .icon-lg {
   font-size: 3.4rem; }
+
+.flex-column {
+  flex-direction: column;
+  gap: 2.4rem; }
+
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+/**************************/
+/* BELOW 1920px (larger desktops) */
+/**************************/
+@media (max-width: 120em) {
+  .section__hero {
+    height: 85vh; } }
+
+/**************************/
+/* BELOW 1728px (mac) */
+/**************************/
+@media (max-width: 108em) {
+  .section__hero {
+    height: 68vh; } }
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+@media (max-width: 84em) {
+  .section__hero {
+    height: 68vh; }
+  .heading-primary--main,
+  .heading-name {
+    font-size: 4.4rem; }
+  .heading-primary--sub {
+    padding-right: 9rem;
+    line-height: 1.8; } }
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%; }
+  .section__hero {
+    height: 60vh; } }
+
+/**************************/
+/* BELOW 984px (Tablets) */
+/**************************/
+@media (max-width: 61.5em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%; }
+  .section__hero {
+    height: 60vh; }
+  .hero__container {
+    grid-template-columns: 1.5fr;
+    padding: 0 5rem;
+    position: relative; }
+  .heading-primary--sub {
+    font-size: 2.4rem;
+    padding-right: 53rem;
+    line-height: 1.8; }
+  .hero__right {
+    height: 59rem;
+    width: 45%;
+    position: absolute; }
+  .heading-primary--main,
+  .heading-name {
+    font-size: 6rem; }
+  .hero__img {
+    transform: scale(1.8);
+    top: 17rem; } }
