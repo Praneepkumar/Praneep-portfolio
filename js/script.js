@@ -1,9 +1,9 @@
 "use strict";
-
+const header = document.querySelector(".header");
 /*accordian tabs*/
 document.addEventListener("DOMContentLoaded", function () {
   let tabs = document.querySelectorAll(".item");
-
+  
   tabs.forEach((tab) => {
     tab.addEventListener("click", (e) => {
       let clicked = e.currentTarget;
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*********************Sticky Nav**************************/
 let sectionHeroEl = document.querySelector(".section__hero");
+
 let obs = new IntersectionObserver(
   function (entries) {
     let ent = entries[0];
@@ -66,14 +67,14 @@ allLinks.forEach(function (link) {
     }
 
     // Close mobile naviagtion
-    if (link.classList.contains("main-nav-link"))
-      headerEl.classList.toggle("nav-open");
+    if (link.classList.contains("nav__link"))
+      header.classList.toggle("nav-open");
   });
 });
 
 
 /*mobile-nav*/
 /*btn event listener*/
-const header = document.querySelector(".header"),
-  btn = document.querySelector(".btn-mobile-nav");
+
+let btn = document.querySelector(".btn-mobile-nav");
 btn.addEventListener("click", () => header.classList.toggle("nav-open"));

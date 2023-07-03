@@ -99,7 +99,7 @@
   /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
-    z-index: 999;
+    z-index: 99999;
   }
 
   .header {
@@ -107,7 +107,7 @@
   }
 
   .navigation__nav {
-    background-color:$color-primary-dark;
+    background-color: rgba($color-primary-dark, .98);
     position: absolute;
     top: 0;
     left: 0;
@@ -118,6 +118,8 @@
               -webkit-backdrop-filter: blur(10px);
               -moz-backdrop-filter: blur(10px); */
     display: flex;
+    flex-direction: column;
+    gap: 6rem;
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease-in;
@@ -141,6 +143,7 @@
     pointer-events: auto;
     visibility: visible;
     transform: translateX(0);
+    z-index: 99999;
   }
 
   .nav-open .icon-mobile-nav[name="close"] {
@@ -159,5 +162,10 @@
   .nav__link:link,
   .nav__link:visited {
     font-size: 3rem;
+  }
+
+  .icon-mobile-nav {
+    color: $color-white;
+    
   }
 }
