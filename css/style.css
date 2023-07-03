@@ -739,4 +739,8 @@ body {
   .heading-primary--main {
     line-height: 1.6; }
   .heading-primary--sub {
-    padding: 0; } }
+    padding: 0; }
+  .cards {
+    grid-template-columns: 1fr; }
+  .card {
+    justify-self: center; } }
