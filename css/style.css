@@ -788,4 +788,6 @@ body {
   .card {
     width: 76%; }
   .btn--primary {
-    transform: translateX(9.4rem); } }
+    transform: translateX(12.4rem); }
+  .btn--animated {
+    animation: none; } }
