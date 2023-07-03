@@ -32,6 +32,7 @@
   .heading-name {
     font-size: 4.4rem;
   }
+
   .heading-primary--sub {
     padding-right: 9rem;
     line-height: 1.8;
@@ -47,6 +48,7 @@
     /* 9px / 16px  */
     font-size: 56.25%;
   }
+
   .section__hero {
     height: 60vh;
   }
@@ -61,30 +63,101 @@
     /* 8px / 16px = 0.5 = 50% */
     font-size: 50%;
   }
+
   .section__hero {
     height: 60vh;
   }
+
   .hero__container {
     grid-template-columns: 1.5fr;
     padding: 0 5rem;
     position: relative;
   }
+
   .heading-primary--sub {
     font-size: 2.4rem;
     padding-right: 53rem;
     line-height: 1.8;
   }
+
   .hero__right {
     height: 59rem;
     width: 45%;
     position: absolute;
   }
+
   .heading-primary--main,
   .heading-name {
     font-size: 6rem;
   }
+
   .hero__img {
     transform: scale(1.8);
     top: 17rem;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 999;
+  }
+
+  .header {
+    margin-bottom: 6rem;
+  }
+
+  .navigation__nav {
+    background-color:$color-primary-dark;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    /*  backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              -moz-backdrop-filter: blur(10px); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .navigation__nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu"] {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 3rem;
   }
 }

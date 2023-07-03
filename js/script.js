@@ -70,3 +70,10 @@ allLinks.forEach(function (link) {
       headerEl.classList.toggle("nav-open");
   });
 });
+
+
+/*mobile-nav*/
+/*btn event listener*/
+const header = document.querySelector(".header"),
+  btn = document.querySelector(".btn-mobile-nav");
+btn.addEventListener("click", () => header.classList.toggle("nav-open"));

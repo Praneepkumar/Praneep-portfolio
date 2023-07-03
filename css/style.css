@@ -420,11 +420,13 @@ body {
 .sticky .section-hero {
   margin-top: 9.6rem; }
 
-.navigation__nav {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
+.navigation {
+  position: relative; }
+  .navigation__nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
 
 .nav__list {
   font-size: 2rem;
@@ -453,6 +455,22 @@ body {
 .nav__link:hover::after, .nav__link:active::after {
   width: 70%;
   opacity: 1; }
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  right: 2.5rem;
+  top: 0;
+  display: none; }
+
+.icon-mobile-nav {
+  font-size: 4.8rem;
+  color: #fff; }
+
+.icon-mobile-nav[name="close"] {
+  display: none; }
 
 .hero {
   transition: all 0.8s ease-out; }
@@ -499,8 +517,8 @@ body {
   width: 100%;
   height: 8rem;
   padding: 2.5rem 0;
-  background-color: rgba(255, 255, 255, 0.97);
-  z-index: 999;
+  background-color: rgba(12, 12, 12, 0.09);
+  z-index: 9999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
   color: #0C0C0C; }
 
@@ -641,4 +659,49 @@ body {
     font-size: 6rem; }
   .hero__img {
     transform: scale(1.8);
-    top: 17rem; } }
+    top: 17rem; }
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 999; }
+  .header {
+    margin-bottom: 6rem; }
+  .navigation__nav {
+    background-color: #0C0C0C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    /*  backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              -moz-backdrop-filter: blur(10px); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+    /* 1) Hide it visually */
+    opacity: 0;
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* 3) Hide it from screen readers */
+    visibility: hidden; }
+  .nav-open .navigation__nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0); }
+  .nav-open .icon-mobile-nav[name="close"] {
+    display: block; }
+  .nav-open .icon-mobile-nav[name="menu"] {
+    display: none; }
+  .nav__list {
+    flex-direction: column;
+    gap: 4.8rem; }
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 3rem; } }
