@@ -32,9 +32,6 @@
     align-items: flex-start;
   }
 
-
-
-
   &__design {
     justify-self: end;
   }
@@ -51,7 +48,6 @@
   &__tags {
     display: inline-flex;
     gap: 0.7rem;
-
   }
 
   &:not(.card--col-3):hover {
@@ -71,7 +67,7 @@
 
   &__portfolio {
     background-color: $color-grey-light-1;
-    border: 1px solid #BBB;
+    border: 1px solid #bbb;
     color: $color-primary;
   }
 }
@@ -121,7 +117,7 @@
     font-size: 2.4rem;
   }
 }
-.cta{
- /*  padding: 0 2rem; */
-  margin:0 auto;
+.cta {
+  /*  padding: 0 2rem; */
+  margin: 0 auto;
 }
