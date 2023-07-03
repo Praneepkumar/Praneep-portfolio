@@ -1,0 +1,78 @@
+.accordian {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  padding: 2.5rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  column-gap: 3.8rem;
+  row-gap: 1.8rem;
+  border-bottom: 1px solid rgba(241, 241, 241, 0.49);
+  transition: all 0.5s ease-out;
+  &:first-child {
+    border-top: 1px solid rgba(241, 241, 241, 0.49);
+  }
+}
+
+.hidden-box {
+  grid-column: 2;
+  display: none;
+  transition: all 1s ease-in-out;
+  overflow-y: auto; /* Added overflow property */
+  p,
+  ul li {
+    font-size: $default-font-size;
+    color: $color-grey-light-2;
+    font-weight: 300;
+  }
+}
+.text-date,
+.title-text {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.text-date {
+  color: $color-white;
+  line-height: 1.4;
+
+  span {
+    color: $color-grey-light-2;
+    font-size: 1.6rem;
+    margin-left: 3rem;
+    display: inline-block;
+  }
+}
+.title-text {
+  color: $color-secondary;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.org-name {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: $color-white;
+}
+.icon_accordian {
+  width: 3.2rem;
+  height: 3.2rem;
+  fill: $color-grey-light-2;
+  transition: all 0.5s;
+
+  &:hover {
+    fill: $color-secondary;
+    cursor: pointer;
+  }
+}
+.icon_accordian-active {
+  transform: rotate(180deg);
+  fill: $color-secondary;
+}
+.active .hidden-box {
+  display: block;
+  /*  max-height: 1000px; /* Adjust the value based on your content height  */
+}

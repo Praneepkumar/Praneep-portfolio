@@ -1,0 +1,34 @@
+.header {
+  max-width: 100%;
+  padding: 4rem 0;
+  transition: all 0.4s;
+  &--animated {
+    animation: moveInTop 0.3s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding: 2.5rem 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  color: $color-primary-dark;
+}
+
+.sticky .header .nav__list .nav__link:link,
+.sticky .nav__link:visited {
+  color: $color-text-dark;
+}
+.sticky .header .nav__list .nav__link:hover::after {
+  background: $color-primary-dark;
+  border-radius: 0.9rem;
+}
+.sticky .section-hero {
+  margin-top: 12rem;
+}
