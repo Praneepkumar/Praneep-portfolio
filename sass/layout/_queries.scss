@@ -4,7 +4,7 @@
 /* BELOW 1920px (larger desktops) */
 /**************************/
 
-@media (max-width: 120em) {
+/* @media (max-width: 120em) {
   .section__hero {
     height: 85vh;
   }
@@ -14,19 +14,16 @@
 /* BELOW 1728px (mac) */
 /**************************/
 
-@media (max-width: 108em) {
+/* @media (max-width: 108em) {
   .section__hero {
     height: 68vh;
   }
-}
+} */
 
 /**************************/
 /* BELOW 1344px (Smaller desktops) */
 /**************************/
 @media (max-width: 84em) {
-  .section__hero {
-    height: 68vh;
-  }
 
   .heading-primary--main,
   .heading-name {
@@ -48,10 +45,6 @@
     /* 9px / 16px  */
     font-size: 56.25%;
   }
-
-  .section__hero {
-    height: 60vh;
-  }
 }
 
 /**************************/
@@ -65,7 +58,7 @@
   }
 
   .section__hero {
-    height: 60vh;
+    height: 80rem;
   }
 
   .hero__container {
@@ -107,7 +100,7 @@
   }
 
   .navigation__nav {
-    background-color: rgba($color-primary-dark, .98);
+    background-color: rgba(0, 0, 0, .98);
     position: absolute;
     top: 0;
     left: 0;
@@ -123,7 +116,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease-in;
-
+    overflow: hidden;
     /* Hide navigation */
     /* Allows NO transitions at all */
     /* display: none; */
@@ -144,6 +137,7 @@
     visibility: visible;
     transform: translateX(0);
     z-index: 99999;
+
   }
 
   .nav-open .icon-mobile-nav[name="close"] {
@@ -165,7 +159,59 @@
   }
 
   .icon-mobile-nav {
-    color: $color-white;
-    
+    color: #fff;
+
+  }
+
+  .sticky .header {
+    color: #fff;
+    padding: 3rem 0;
+    height: 10rem;
+
+  }
+
+  .sticky .nav__link:visited {
+    color: #fff;
+  }
+
+  .sticky .icon-mobile-nav {
+    font-size: 4.8rem;
+    color: $color-primary-dark;
+  }
+}
+
+/**************************/
+/* BELOW 784px (Mobile) */
+/**************************/
+
+@media (max-width: 49em) {
+  .header {
+    margin-bottom: 0;
+  }
+
+
+  .hero__left {
+    text-align: left
+  }
+
+  .hero__right {
+    height: 27rem;
+    width: 29%;
+    position: absolute;
+    right: 4.7rem;
+  }
+
+
+  .hero__img {
+    transform: scale(2.1);
+    top: 14rem;
+  }
+
+  .heading-primary--main {
+    line-height: 1.6;
+  }
+
+  .heading-primary--sub {
+    padding: 0;
   }
 }
