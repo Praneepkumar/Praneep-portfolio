@@ -256,7 +256,8 @@ body {
     padding: 2.1rem 2.8rem;
     border-radius: 0.9rem; }
   .card__tags {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
     gap: 0.7rem; }
   .card:not(.card--col-3):hover {
     background-color: #ffffef;
@@ -269,7 +270,8 @@ body {
   padding: 0.3rem 1rem;
   font-size: 1.2rem;
   text-transform: capitalize;
-  border-radius: 1rem; }
+  border-radius: 1rem;
+  text-align: center; }
   .tag__portfolio {
     background-color: #EBEBEB;
     border: 1px solid #bbb;
@@ -724,23 +726,66 @@ body {
 /* BELOW 784px (Mobile) */
 /**************************/
 @media (max-width: 49em) {
+  html {
+    /* 7px / 16px = 0.43 = 43% */
+    font-size: 43%; }
   .header {
     margin-bottom: 0; }
   .hero__left {
     text-align: left; }
   .hero__right {
-    height: 27rem;
+    height: 33rem;
     width: 29%;
     position: absolute;
     right: 4.7rem; }
   .hero__img {
     transform: scale(2.1);
-    top: 14rem; }
+    top: 17rem; }
   .heading-primary--main {
     line-height: 1.6; }
   .heading-primary--sub {
-    padding: 0; }
+    padding-right: 30.3rem; }
   .cards {
     grid-template-columns: 1fr; }
   .card {
-    justify-self: center; } }
+    justify-self: center;
+    width: 43%; } }
+
+@media (max-width: 36.8em) {
+  html {
+    font-size: 37.3%; }
+  .hero__right {
+    right: 0.7rem; }
+  .hero__img {
+    transform: scale(2.4);
+    top: 18rem; }
+  .section__hero {
+    height: 82rem; }
+  .card {
+    width: 57%; }
+  .heading-primary--sub {
+    padding-right: 22rem; } }
+
+@media (max-width: 36.8em) {
+  .hero__right {
+    right: 18rem;
+    top: 51rem;
+    width: 38%;
+    height: 27rem; }
+  .hero__img {
+    transform: scale(2.3);
+    top: 15rem; }
+  .section__hero {
+    height: 109rem; }
+  .heading-primary--sub {
+    padding-right: 0;
+    text-align: center; }
+  .heading-primary--main {
+    padding-right: 0;
+    text-align: center; }
+  .hero__left .u-margin-bottom-lg {
+    margin-bottom: 39rem !important; }
+  .card {
+    width: 76%; }
+  .btn--primary {
+    transform: translateX(7.4rem); } }
