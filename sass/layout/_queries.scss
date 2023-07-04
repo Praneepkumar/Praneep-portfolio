@@ -24,7 +24,6 @@
 /* BELOW 1344px (Smaller desktops) */
 /**************************/
 @media (max-width: 84em) {
-
   .heading-primary--main,
   .heading-name {
     font-size: 4.4rem;
@@ -100,7 +99,7 @@
   }
 
   .navigation__nav {
-    background-color: rgba(0, 0, 0, .98);
+    background-color: rgba(0, 0, 0, 0.98);
     position: absolute;
     top: 0;
     left: 0;
@@ -137,14 +136,13 @@
     visibility: visible;
     transform: translateX(0);
     z-index: 99999;
-
   }
 
-  .nav-open .icon-mobile-nav[name="close"] {
+  .nav-open .icon-mobile-nav[name='close'] {
     display: block;
   }
 
-  .nav-open .icon-mobile-nav[name="menu"] {
+  .nav-open .icon-mobile-nav[name='menu'] {
     display: none;
   }
 
@@ -160,14 +158,12 @@
 
   .icon-mobile-nav {
     color: #fff;
-
   }
 
   .sticky .header {
     color: #fff;
     padding: 3rem 0;
     height: 10rem;
-
   }
 
   .sticky .nav__link:visited {
@@ -194,9 +190,8 @@
     margin-bottom: 0;
   }
 
-
   .hero__left {
-    text-align: left
+    text-align: left;
   }
 
   .hero__right {
@@ -205,7 +200,6 @@
     position: absolute;
     right: 4.7rem;
   }
-
 
   .hero__img {
     transform: scale(2.1);
@@ -250,7 +244,6 @@
 
   .hero__right {
     right: 0.7rem;
-
   }
 
   .hero__img {
@@ -263,7 +256,6 @@
   }
 
   .card {
-
     width: 57%;
   }
 
@@ -273,7 +265,6 @@
 }
 
 @media (max-width: 36.8em) {
-
   .hero__right {
     right: 18rem;
     top: 51rem;
@@ -289,7 +280,6 @@
   .section__hero {
     height: 109rem;
   }
-
 
   .heading-primary--sub {
     padding-right: 0;
@@ -311,7 +301,6 @@
 
   .hero__left .u-margin-bottom-lg {
     margin-bottom: 39rem !important;
-
   }
 
   .list-item {
@@ -340,7 +329,6 @@
 
   .card--description,
   .btn--secondary {
-
     font-size: 2rem;
   }
 }

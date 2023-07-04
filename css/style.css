@@ -741,9 +741,9 @@ body {
     visibility: visible;
     transform: translateX(0);
     z-index: 99999; }
-  .nav-open .icon-mobile-nav[name="close"] {
+  .nav-open .icon-mobile-nav[name='close'] {
     display: block; }
-  .nav-open .icon-mobile-nav[name="menu"] {
+  .nav-open .icon-mobile-nav[name='menu'] {
     display: none; }
   .nav__list {
     flex-direction: column;
