@@ -91,9 +91,10 @@ let sectionObserver = new IntersectionObserver(revealSection, {
   threshold: 0.1,
 });
 allSections.forEach(section => {
-  /* if (!section.classList.contains('section__about')) { */
-  section.classList.add('section--hidden');
-  sectionObserver.observe(section);
+  if (!section.classList.contains('section__about')) {
+    section.classList.add('section--hidden');
+    sectionObserver.observe(section);
+  }
 });
 
 /*tabs implementation*/
