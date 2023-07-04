@@ -92,13 +92,14 @@
   .btn-mobile-nav {
     display: block;
     z-index: 99999;
+    padding-top: 5rem;
   }
 
   .header {
-    margin-bottom: 6rem;
+    margin-bottom: 10rem;
   }
 
-  .navigation__nav {
+  .navigation {
     background-color: rgba(0, 0, 0, 0.98);
     position: absolute;
     top: 0;
@@ -110,12 +111,10 @@
               -webkit-backdrop-filter: blur(10px);
               -moz-backdrop-filter: blur(10px); */
     display: flex;
-    flex-direction: column;
-    gap: 6rem;
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease-in;
-    overflow: hidden;
+
     /* Hide navigation */
     /* Allows NO transitions at all */
     /* display: none; */
@@ -128,9 +127,12 @@
 
     /* 3) Hide it from screen readers */
     visibility: hidden;
+    &__nav {
+      flex-direction: column;
+      gap: 4.8rem;
+    }
   }
-
-  .nav-open .navigation__nav {
+  .nav-open .navigation {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
@@ -146,17 +148,13 @@
     display: none;
   }
 
-  .nav__list {
-    flex-direction: column;
-    gap: 4.8rem;
-  }
-
   .nav__link:link,
   .nav__link:visited {
     font-size: 3rem;
   }
 
   .icon-mobile-nav {
+   
     color: #fff;
   }
 
