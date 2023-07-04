@@ -16,7 +16,7 @@
 
 <body>
   <!-- HERO-SECTION -->
-  <section class="section__hero">
+  <section class="section section__hero">
     <!-- HEADER-->
     <header class="header header--animated">
       <nav class="container navigation">
@@ -63,7 +63,15 @@
             Resume</a>
         </div>
         <div class="hero__right hero__animated">
-          <img src="images/praneep-img-bw.png" alt="Praneep, UI developer" class="hero__img" />
+
+          <picture>
+            <source srcset="images/praneep-img-bw.webp" type="image/webp">
+            <source srcset="images/praneep-img-bw.png" type="image/png">
+
+            <img src="images/praneep-img-bw.webp" class="hero__img" alt="Praneep, UI developer">
+          </picture>
+          <!-- 
+          <img src="images/praneep-img-bw.png" alt="Praneep, UI developer" class="hero__img" /> -->
         </div>
       </div>
     </div>
@@ -71,7 +79,7 @@
 
   <main>
     <!-- ABOUT-SECTION -->
-    <section class="section__about u-margin-top-lg u-margin-bottom-lg" id="about">
+    <section class="section section__about u-margin-top-lg u-margin-bottom-lg" id="about">
       <div class="container">
         <h2 class="heading-secondary u-margin-bottom-lg">About</h2>
         <p class="paragraph section__about--paragraph">
@@ -154,7 +162,7 @@
     </section>
 
     <!-- ABOUT-SECTION -->
-    <section class="section__experience" id="experience">
+    <section class="section section__experience" id="experience">
       <div class="container">
         <h2 class="heading-secondary heading-white u-margin-bottom-lg">
           Experience
@@ -329,15 +337,74 @@
           </div>
         </div>
     </section>
-    <section class="section__portfolio" id="portfolio">
+    <section class="section section__portfolio" id="portfolio">
 
-      <div class="tabs u-margin-bottom-lg">
-        <div class="tabs__tab">Design</div>
-        <div class="tabs__tab">Code</div>
-      </div>
+
       <div class="container">
-        <h2 class="heading-secondary u-margin-bottom-lg">Portfolio</h2>
-        <div class="cards cards--col-3">
+        <div class="tab--header u-margin-bottom-lg">
+          <h2 class="heading-secondary">Portfolio</h2>
+          <div class="tabs-container">
+            <button class="tabs-container__tab tabs-container__tab--active" data-tab="1">Design</button>
+            <button class="tabs-container__tab" data-tab="2">Code</button>
+          </div>
+        </div>
+
+        <div class="cards cards--col-3 tab__content tab__content--1 tab__content--active">
+
+
+          <div class="card card--col-3">
+            <img src="images/portfolio_img-3.png" alt="orders management case study design" class="card-img">
+            <div class="card--content">
+              <div class="card__tags">
+                <div class="tag tag__portfolio">Landing page</div>
+
+              </div>
+              <h3 class="card--heading">Orders Management</h3>
+              <p class="card--description">Orders management is an enterprise mobile for an ice cream store which allows
+                vendors to track and manage orders.</p>
+            </div>
+            <div class="cta u-margin-top-sm u-margin-bottom-md-1">
+              <a href="#" class="btn btn--secondary">View in Figma<i class="ph ph-arrow-square-out card--cta-icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="card card--col-3">
+            <img src="images/portfolio_img-2.png" alt="orders management case study design" class="card-img">
+            <div class="card--content">
+              <div class="card__tags">
+                <div class="tag tag__portfolio">Mobile app design</div>
+                <div class="tag tag__portfolio">Case study</div>
+              </div>
+              <h3 class="card--heading">Orders Management</h3>
+              <p class="card--description">Orders management is an enterprise mobile for an ice cream store which allows
+                vendors to track and manage orders.</p>
+            </div>
+            <div class="cta u-margin-top-sm u-margin-bottom-md-1">
+              <a href="#" class="btn btn--secondary">View in Figma<i class="ph ph-arrow-square-out card--cta-icon"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card card--col-3">
+            <img src="images/portfolio_img-1.png" alt="Event management case study design" class="card-img">
+            <div class="card--content">
+              <div class="card__tags">
+                <div class="tag tag__portfolio">Dashboard design</div>
+                <div class="tag tag__portfolio">Case study</div>
+              </div>
+              <h3 class="card--heading">Event Management System</h3>
+              <p class="card--description">Event management system is an enterprise dashboard which allows vendors to
+                plan, track, and manage events.</p>
+            </div>
+            <div class="cta u-margin-top-sm u-margin-bottom-md-1">
+              <a href="#" class="btn btn--secondary">View in Figma<i class="ph ph-arrow-square-out card--cta-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="cards cards--col-3 tab__content tab__content--2">
           <div class="card card--col-3">
             <img src="images/portfolio_img-1.png" alt="Event management case study design" class="card-img">
             <div class="card--content">
@@ -389,11 +456,12 @@
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
   </main>
-  <footer class="footer" id="contact">
+  <footer class="footer section" id="contact">
     <div class="container">
       <div class="footer__content">
         <div class="footer__content--contact">

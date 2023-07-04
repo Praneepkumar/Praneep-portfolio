@@ -50,9 +50,9 @@ const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
     const href = link.getAttribute("href");
-
+    if (href.startsWith("#"))
+      e.preventDefault();
     // Scroll back to top
     if (href === "#")
       window.scrollTo({
@@ -78,3 +78,48 @@ allLinks.forEach(function (link) {
 
 let btn = document.querySelector(".btn-mobile-nav");
 btn.addEventListener("click", () => header.classList.toggle("nav-open"));
+
+
+//reavealing sections
+let allSections = document.querySelectorAll('.section');
+function revealSection(entries, observer) {
+  let [entry] = entries;
+  //console.log(entry);
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+}
+let sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+allSections.forEach(section => {
+  section.classList.add('section--hidden');
+  sectionObserver.observe(section);
+});
+
+
+/*tabs implementation*/
+
+let tabsContainer = document.querySelector('.tabs-container');
+let tabs = document.querySelectorAll('.tabs-container__tab');
+let tabsContent = document.querySelectorAll('.tab__content');
+
+tabsContainer.addEventListener('click', function (e) {
+  e.preventDefault();
+  let clicked = e.target.closest('.tabs-container__tab');
+  if (!clicked) return;
+  //console.log(clicked);
+
+  //removing all active classes from tabs & tabs-content
+  tabs.forEach(tab => tab.classList.remove('tabs-container__tab--active'));
+  tabsContent.forEach(tab =>
+    tab.classList.remove('tab__content--active')
+  );
+
+  //adding active classe to clicked tab and respective tab content
+  clicked.classList.add('tabs-container__tab--active');
+  document
+    .querySelector(`.tab__content--${clicked.dataset.tab}`)
+    .classList.add('tab__content--active');
+});
