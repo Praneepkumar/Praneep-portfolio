@@ -118,3 +118,13 @@ tabsContainer.addEventListener('click', function (e) {
     .querySelector(`.tab__content--${clicked.dataset.tab}`)
     .classList.add('tab__content--active');
 });
+
+const navLinks = document.querySelectorAll('.nav__link');
+const maxCharacters = 15;
+
+navLinks.forEach(link => {
+  const text = link.textContent;
+  if (text.length > maxCharacters) {
+    link.textContent = text.slice(0, maxCharacters) + '...';
+  }
+});

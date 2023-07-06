@@ -1,6 +1,6 @@
 .header {
   max-width: 100%;
-  padding: 4rem 0;
+  padding: 5rem 11rem;
   transition: all 0.4s;
 
   &--animated {
@@ -20,7 +20,7 @@
   background-color: rgba($color-white, 0.97);
   z-index: 9999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
-  
+
   color: $color-primary-dark;
 }
 
